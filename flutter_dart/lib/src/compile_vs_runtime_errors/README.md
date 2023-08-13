@@ -1,11 +1,3 @@
-\*
-
-Created on 13 August 2023
-
-@author Sai Sumanth
-
-\*
-
 Compile time errors in Dart are errors that are detected by the Dart compiler during the process of converting your source code into machine-readable instructions. These errors occur due to violations of the language's syntax rules, type requirements, or other constraints that the compiler enforces.
 
 1. **Syntax Errors:**
@@ -71,7 +63,7 @@ Compile time errors in Dart are errors that are detected by the Dart compiler du
    addNumbers(5);  // Incorrect number of arguments
    ```
 
-RUNTIME Errors will be detected by 'Dart Program Runtime'. These are the Problems that cannot be detected by the compiler, such as division by zero, accessing a nonexistent variable, or an invalid cast
+Runtime Errors will be detected by 'Dart Program Runtime'. These are the Problems that cannot be detected by the compiler, such as division by zero, accessing a nonexistent variable, or an invalid cast
 
 1. **Invalid Cast:**
 
