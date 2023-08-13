@@ -16,6 +16,8 @@ linter:
   rules:
     avoid_print: false
     lines_longer_than_80_chars: false
+    require_trailing_commas: false
+    sort_constructors_first: false
 
 # Uncomment the following section to specify additional rules.
 

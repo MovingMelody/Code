@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, omit_local_variable_types, prefer_final_locals
+// ignore_for_file: unused_local_variable, omit_local_variable_types, prefer_final_locals, unused_element
 
 /*
 * Created on 13 August 2023
@@ -9,9 +9,13 @@
 import 'dart:io';
 
 ///
-/// Few examples for Compile Time Errors and Runtime Errors
+/// Compile Time Errors 🆚 Runtime Errors
 ///
 void main(List<String> args) {
+  ///
+  /// method addNumbers with return type int
+  /// [a,b] are two positional parameters
+  ///
   int addNumbers(int a, int b) {
     return a + b;
   }
@@ -22,26 +26,28 @@ void main(List<String> args) {
 
   // 2 positional arguments expected by 'addNumbers', but 1 found.
   // Try adding the missing arguments.
-  // addNumbers(5);
+  // addNumbers(5); // 🚨 Error
 
   // The body might complete normally, causing 'null' to be returned,
   // but the return type, 'int', is a potentially non-nullable type.
-  // int getNumber() {}
+  // int getNumber() {} // 🚨 Error
 
   ///
   /// Type errors
   ///
   // A value of type 'String' can't be assigned to a variable of type 'int'.
-  // int number = "42";
+  // int number = "42"; // 🚨 Error
 
   int x1 = 10;
   String y1 = 'Hello';
   // The argument type 'int' can't be assigned to the parameter type 'String'.
-  // var stringAdd = y1 + x1;
+  // var stringAdd = y1 + x1; // 🚨 Error
+  
   // The argument type 'String' can't be assigned to the parameter type 'num'.
-  // var intAdd = x1 + y1;
+  // var intAdd = x1 + y1; // 🚨 Error
+
   // The argument type 'String' can't be assigned to the parameter type 'num'
-  // print(x1 + y1);
+  // print(x1 + y1); // 🚨 Error
 
   ///
   /// **** RUNTIME Errors ****
@@ -54,8 +60,7 @@ void main(List<String> args) {
   print(x as String); // This will cause an invalid cast error
 
   const str = 'string';
-  // Invalid radix-10 number
-  final val = int.parse(str);
+  final val = int.parse(str); // Invalid radix-10 number
   print(val);
 
   ///
