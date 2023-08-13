@@ -21,9 +21,9 @@ void main(List<String> args) {
   }
 
   ///
-  /// FINAL: Variables declared as final can only be assigned once and this happens at runtime.
+  /// FINAL: 💡 Variables declared as final can only be assigned once and this happens at runtime.
   ///
-  /// Once assigned a value, that value cannot be changed.
+  /// 💡 Once assigned a value, that value cannot be changed.
   ///
   /// 💡 late keyword can be used along with final 💡
   ///
@@ -87,12 +87,12 @@ void main(List<String> args) {
   ///
   ///
   /// CONST: defines a constant
-  /// const variables are compile-time constants.
+  /// 💡 const variables are compile-time constants.
   /// This means that the value of a const variable is known at compile time, not runtime.
   ///
   /// They are implicitly static, meaning they belong to the class itself, not to instances of the class.
   /// The value of a const variable is calculated at compile time and shared across all instances.
-  /// 
+  ///
   /// check [ConstClass] to understand above two lines
   ///
   print('******* 💪 CONST 💪 ********');
@@ -162,7 +162,7 @@ void main(List<String> args) {
 final class FinalClass {
   final String name;
   // ignore: avoid_field_initializers_in_const_classes
-  final cantBeChanged =
+  final String cantBeChanged =
       'assigned during declaration & Cannot be changed later even while creating object';
 
   ///
@@ -193,6 +193,8 @@ final class ConstClass {
   /// And the below value [pi] CAN'T 🙅 be accessed using instance of this class
   /// They can only be access directly [ConstClass.pi] without creating any instance. Because they are compile time constants
   ///
+  /// Static Fields are independect of any instance. and they are properties of class itself
+  ///
   static const pi = 3.14;
   // const pi2 = 3.14; /// Not possible : Error 🚨 Only static fields can be declared as const
   static const weight = 60;
@@ -218,7 +220,9 @@ final class VarClass {
     // this.maxAge = 100; // Valid Statement 👍
     maxAge = 100;
     name = 'Mr.$name';
-    name = 'Dr.$name'; /// name can be set any number of time because it's not final
+    name = 'Dr.$name';
+
+    /// name can be set any number of time because it's not final
   }
 
   VarClass.withDifferentAgeType({required this.place, required this.name});
