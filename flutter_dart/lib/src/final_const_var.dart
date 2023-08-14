@@ -1,3 +1,4 @@
+// ignore_for_file:  sort_constructors_first
 // ignore_for_file: dangling_library_doc_comments, prefer_const_declarations, omit_local_variable_types, prefer_typing_uninitialized_variables, inference_failure_on_uninitialized_variable, public_member_api_docs, avoid_dynamic_calls
 
 /*
@@ -235,6 +236,10 @@ void classesMain() {
   /// class with final variables
   ///
   const finalClassObj = FinalClass(name: 'Vikram');
+  const finalClassObj2 = FinalClass(name: 'Vikram');
+  print(identical(finalClassObj, finalClassObj2)); // true
+  print(
+      'comparing two FinalClass const constructors : ${finalClassObj == finalClassObj2}'); // true (because of const constructors)
   print(finalClassObj.emoji); // gettter - prints cool 😎
   print(finalClassObj.name); // Vikram
 
@@ -265,3 +270,11 @@ void classesMain() {
   print(varClassObjWithNamed.name); // Jeet
   print(varClassObjWithNamed.place); // Bengaluru
 }
+
+// class DifferentTypesOfVariableDeclarations {
+//   final String name;
+//   static const type = 'male';
+//   final int age = 23;
+//   var purpose;
+//   DifferentTypesOfVariableDeclarations({required this.name});
+// }
