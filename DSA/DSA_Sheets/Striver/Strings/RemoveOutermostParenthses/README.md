@@ -1,3 +1,7 @@
+**********************************
+1021. Remove Outermost Parentheses
+**********************************
+
 <div class="content__u3I1 question-content__JfgR"><div><p>A valid parentheses string is either empty <code>""</code>, <code>"(" + A + ")"</code>, or <code>A + B</code>, where <code>A</code> and <code>B</code> are valid parentheses strings, and <code>+</code> represents string concatenation.</p>
 <ul>
 <li>For example, <code>""</code>, <code>"()"</code>, <code>"(())()"</code>, and <code>"(()(()))"</code> are all valid parentheses strings.</li>
