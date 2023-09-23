@@ -31,6 +31,7 @@
   },
   "java.project.sourcePaths": [
     "ProblemSolving/LEETCODE",
-    "ProblemSolving/DSA_Sheets/Striver/Strings/RemoveOutermostParenthses"
+    "ProblemSolving/DSA_Sheets/Striver/Strings/RemoveOutermostParenthses",
+    "DSA/GFG"
   ]
 }

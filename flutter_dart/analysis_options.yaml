@@ -18,6 +18,8 @@ linter:
     lines_longer_than_80_chars: false
     require_trailing_commas: false
     sort_constructors_first: false
+    public_member_api_docs: false
+    prefer_single_quotes: false
 
 # Uncomment the following section to specify additional rules.
 

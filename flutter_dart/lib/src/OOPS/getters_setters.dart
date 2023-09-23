@@ -8,7 +8,7 @@
 
 /*
 
-~~~~~~~~~ 🧢 GETTERS & SETTERS IN DART ~~~~~~~~
+~~~~~~~~~ 🧢 GETTERS & SETTERS IN DART 🧢 ~~~~~~~~
 
 In dart, getters and setters are the specials methods used to access and modify the private fields
 
@@ -48,9 +48,7 @@ class PasswordManager {
       /// encrypting given password
       _encryptedPassword = '$newPassword.sha256';
 
-      ///
       /// Update the password strength status.
-      ///
       updatePasswordStrengthStatus(pass: newPassword);
     } else {
       throw ArgumentError('Password length should be atlease 5 characters');
@@ -59,10 +57,12 @@ class PasswordManager {
 
   void updatePasswordStrengthStatus({required String pass}) {
     print('updating password status');
-    try {
-      /// password should contain atleast one numeric value to be a strong password
-      _isPasswordStrongEnough = pass.contains(RegExp(r'[0-9]'));
 
+    /// password should contain atleast one numeric value to be a strong password
+    _isPasswordStrongEnough = pass.contains(RegExp(r'[0-9]'));
+
+    
+    try {
       dynamic foo = true;
       foo = 100;
       foo = _isPasswordStrongEnough;
