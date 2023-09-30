@@ -39,7 +39,7 @@ class PasswordManager {
           'Set password for your account before accessing');
     }
   }
-
+  /// getter with return type [bool]
   bool get isStrongPassword => _isPasswordStrongEnough;
 
   /// Password Setter
@@ -75,6 +75,7 @@ class PasswordManager {
   }
 }
 
+/// 🏁 Entry Point 
 void main(List<String> args) {
   /// create instance
   final passManager = PasswordManager();

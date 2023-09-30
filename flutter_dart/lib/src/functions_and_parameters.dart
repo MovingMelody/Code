@@ -1,13 +1,11 @@
 // ignore_for_file: dangling_library_doc_comments, always_put_required_named_parameters_first
 /*
 * Created on 30 September 2023
-* 
 * @author Sai Sumanth
 */
 
 /*
-          📦 Functions & Parameters in Dart 📤
-
+       📦 Functions & Parameters in Dart 📦
 returntype functionName(parameter1,parameter2, ...){
   // function body
 }
@@ -18,7 +16,6 @@ If the function doesn’t return anything, you can use [void] as the return type
   - Main objective of functions in any language is DRY(Don't Repeat Yourself)
   - [Abstraction]: Functions allow us to hide the implementation details of a piece of code.
   - Functions make our code more readable, reusable and maintainable.
-
 */
 
 ///
@@ -95,8 +92,7 @@ void canIVote({required String name, int age = 18}) {
 
 /// 💡 combination of both Required Positional Params & Named Params
 /// order is important here - below syntax is not VALID
-/// ❌ namedWithRequiredPos({int age = 18, required String cntry}, String name)
-///
+/// ❌ namedWithRequiredPos({int age = 18, required String cntry}, String name){}
 void namedWithRequiredPos(String name, {int age = 18, required String cntry}) {
   print('Yes $name you can vote at $age.');
   print('Country Name : $cntry');
@@ -109,7 +105,6 @@ void namedWithRequiredPos(String name, {int age = 18, required String cntry}) {
 /// If you don’t provide a default value, their types must be nullable as their default value will be null
 ///
 /// All Parameters are optional and order matters here
-///
 void allOptionalPositional([String? to, String from = 'Earth']) {
   print('Hello $to from Optional Positional Parameters on $from');
 }
