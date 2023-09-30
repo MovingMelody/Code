@@ -6,18 +6,18 @@
 */
 
 /*
-            📦 Functions & Parameters in Dart 📤
+          📦 Functions & Parameters in Dart 📤
 
-  returntype functionName(parameter1,parameter2, ...){
-    // function body
-  }
+returntype functionName(parameter1,parameter2, ...){
+  // function body
+}
+  
+[returntype]: Function output type. It can be void, [String], [int], [double], etc. 
+If the function doesn’t return anything, you can use [void] as the return type.
 
-  [returntype]: Function output type. It can be void, [String], [int], [double], etc. 
-  If the function doesn’t return anything, you can use [void] as the return type.
-
-   - Main objective of functions in any language is DRY(Don't Repeat Yourself)
-   - [Abstraction]: Functions allow us to hide the implementation details of a piece of code.
-   - Functions make our code more readable, reusable and maintainable.
+  - Main objective of functions in any language is DRY(Don't Repeat Yourself)
+  - [Abstraction]: Functions allow us to hide the implementation details of a piece of code.
+  - Functions make our code more readable, reusable and maintainable.
 
 */
 
@@ -80,7 +80,7 @@ double getFdRate(int? period, int amount) => amount * 7.5 * (period ?? 1) / 100;
 
 ///
 /// 2️⃣. Named Parameters
-/// Mandatory to provide all params
+/// Mandatory to provide all params with name (unless a default value is given)
 ///
 void allNamedArgs(
     {required String name, required String gender, required int age}) {
@@ -104,7 +104,6 @@ void namedWithRequiredPos(String name, {int age = 18, required String cntry}) {
 
 ///
 /// 3️⃣. Optional Positional Parameters
-///
 ///
 /// Wrapping a set of function parameters in [] marks them as optional positional parameters.
 /// If you don’t provide a default value, their types must be nullable as their default value will be null
