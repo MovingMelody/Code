@@ -17,5 +17,5 @@ Dart and Flutter Notes on Beginner, Intermediate and Advanced Level Topics
 
 1. Variables - `final` vs `const` vs `var`
 2. `var` 🆚 `dynamic`
-3. [Functions & Parameters](flutter_dart/lib/src/functions_and_parameters.dart)
+3. [Functions & Parameters](lib/src/functions_and_parameters.dart)
 4. Getters & Setters
