@@ -11,11 +11,11 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-Dart and Flutter Practice Notes
+Dart and Flutter Notes on Beginner, Intermediate and Advanced Level Topics
 
 ## Topics Covered
 
 1. Variables - `final` vs `const` vs `var`
 2. `var` 🆚 `dynamic`
-3. Functions & Parameters
+3. [Functions & Parameters](flutter_dart/lib/src/functions_and_parameters.dart)
 4. Getters & Setters
