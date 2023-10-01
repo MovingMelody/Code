@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first, comment_references
 // ignore_for_file: use_raw_strings, cascade_invocations, omit_local_variable_types
 
 /*
@@ -20,6 +21,10 @@ to be treated as objects of a common superclass or interface.
 /// 1️⃣ Example
 ///
 abstract class Animal {
+  final int age;
+
+  Animal({required this.age});
+
   // concrete method
   void makeSound() {
     print('Animal makes a sound.');
@@ -28,6 +33,10 @@ abstract class Animal {
 
 /// concrete subclass
 class Dog extends Animal {
+  final String name;
+
+  Dog({required this.name, required super.age});
+
   @override
   void makeSound() {
     /// 💡 Observe the Super keyword here
@@ -39,14 +48,70 @@ class Dog extends Animal {
 }
 
 void main() {
-  final Animal myPet = Dog(); // Polymorphism: Dog treated as an Animal
+  // Polymorphism: Dog treated as an Animal
+  final Animal myPet = Dog(age: 12, name: 'myPet');
+  print(myPet.age); // prints 12
   myPet.makeSound(); // Calls Dog's makeSound method
-  // myPet.getDogLegsCount; // ❌ he getter 'getDogLegsCount' isn't defined for the type 'Animal'.
+  // myPet.getDogLegsCount; // ❌ he getter 'getDogLegsCount' isn't defined for the type 'Animal'
+  // print(myPet.name); // ❌ The getter 'name' isn't defined for the type 'Animal'
 
-  final Dog myDogPet = Dog();
+  final Dog myDogPet = Dog(age: 10, name: 'myDogPet');
   // final myDogPetWithoutTypeAnnotation = Dog(); // ✅ Totally Valid, No need to specify type explicitly
   myDogPet.makeSound();
   print(myDogPet.getDogLegsCount);
+  print(myDogPet.name);
+  print(myDogPet.age);
+
+  main2();
+}
+
+///
+/// class Message
+///
+class Message {
+  final String text;
+
+  const Message({required this.text});
+}
+
+class ImageMessage extends Message {
+  final String imageUrl;
+
+  ///
+  /// Unnamed constructor
+  ///
+  /// [Constructors] in Dart are not [inherited], so we give [ImageMessage] its own constructor,
+  /// and it needs to accept two values labeled text and imageUrl.
+  /// Since text is technically part of [Message], not [ImageMessage],
+  /// we can't use automatic initialization for it, and we need to specify its type (String)
+  /// so Dart doesn't accept just any type of value there.
+  ///
+  const ImageMessage({required super.text, required this.imageUrl});
+
+  /// another way of creating unnamed constructor, Totally Valid ✅
+  // const ImageMessage({required this.imageUrl, required String txt})
+  //     : super(text: txt);
+
+  /// Named constructor
+  const ImageMessage.onlyMessage({required super.text}) : imageUrl = '';
+}
+
+void main2() {
+  /// Message
+  ///
+  const msg1 = Message(text: 'hi');
+  const imgMsg = ImageMessage(text: 'text', imageUrl: 'https://image.com');
+  const Message imgMsg2 =
+      ImageMessage(text: 'text', imageUrl: 'https://image.com');
+  const emptyImageMessage = ImageMessage.onlyMessage(text: 'text');
+
+  print(msg1.text);
+  print(imgMsg.imageUrl + imgMsg.text);
+
+  print(imgMsg2.text);
+  // print(imgMsg2.imageUrl); // ❌ The getter 'imageUrl' isn't defined for the type 'Message'.
+
+  print(emptyImageMessage.text + emptyImageMessage.imageUrl);
 
   // Example 2
   runShapeExample();
