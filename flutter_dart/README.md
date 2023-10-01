@@ -19,3 +19,4 @@ Dart and Flutter Notes on Beginner, Intermediate and Advanced Level Topics
 2. `var` 🆚 `dynamic` [↗](lib/src/var_vs_dynamic.dart)
 3. Functions & Parameters [↗](lib/src/functions/functions_and_parameters.dart)
 4. Getters & Setters [↗](lib/src/OOPS/getters_setters.dart)
+5. Polymorphism [↗](lib/src/OOPS/polymorphism.dart)
